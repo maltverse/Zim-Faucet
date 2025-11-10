@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ZimFaucet</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-[#1a1a2e] to-[#16213e] text-gray-100">
+    <header class="backdrop-blur-sm bg-[rgba(26,26,46,0.95)] border-b border-white/10 sticky top-0 z-50">
+        <div class="container mx-auto px-5 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="text-2xl text-emerald-400">💰</span>
+                <h1 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-amber-400">ZimFaucet</h1>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="px-4 py-2 rounded-full border border-emerald-500 text-sm">Home</a>
+                <button class="px-4 py-2 rounded-full bg-emerald-500 text-white text-sm font-semibold" id="logout-btn">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-5 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar Navigation -->
+            <aside class="lg:w-1/4 bg-white/5 rounded-xl p-6 border border-white/10 h-fit">
+                <nav class="space-y-2">
+                    <a href="dashboard.html" class="flex items-center p-3 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                        <i data-lucide="layout-dashboard" class="w-5 h-5 mr-3"></i> Dashboard
+                    </a>
+                    <a href="earn.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="dollar-sign" class="w-5 h-5 mr-3"></i> Earn Clicks
+                    </a>
+                    <a href="tasks.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="list-checks" class="w-5 h-5 mr-3"></i> Tasks & Offers
+                    </a>
+                    <a href="withdraw.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="wallet" class="w-5 h-5 mr-3"></i> Withdrawal
+                    </a>
+                    <div class="h-px bg-white/10 my-2"></div>
+                    <a href="referrals.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="users" class="w-5 h-5 mr-3"></i> Referrals
+                    </a>
+                    <div class="h-px bg-white/10 my-2"></div>
+                    <a href="advertiser.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="megaphone" class="w-5 h-5 mr-3"></i> Advertiser Portal
+                    </a>
+                    <a href="about.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="info" class="w-5 h-5 mr-3"></i> About Us
+                    </a>
+                    <a href="contact.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="mail" class="w-5 h-5 mr-3"></i> Contact
+                    </a>
+                    <a href="faq.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="help-circle" class="w-5 h-5 mr-3"></i> FAQ
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lg:w-3/4">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-3xl font-bold text-emerald-300">Dashboard</h2>
+                    <a href="withdraw.html" class="px-4 py-2 bg-emerald-500 text-white font-semibold rounded-lg shadow-md hover:bg-emerald-600 transition-colors">
+                        <i data-lucide="wallet" class="w-4 h-4 inline mr-2"></i> Withdraw Funds
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
+                    <!-- Stat Cards -->
+                    <div class="p-6 rounded-xl bg-white/5 border border-white/10 lg:col-span-2">
+                        <div class="flex items-center justify-between">
+                            <p class="text-sm font-medium text-gray-400">Account Balance</p>
+                            <i data-lucide="credit-card" class="w-6 h-6 text-emerald-500"></i>
+                        </div>
+                        <p class="text-5xl font-extrabold mt-2 text-emerald-400">$15.75</p>
+                        <a href="withdraw.html" class="mt-4 w-full block text-center py-2 bg-emerald-500 text-white font-semibold rounded-lg shadow-md hover:bg-emerald-600 transition-colors">
+                            Withdraw Funds
+                        </a>
+                    </div>
+                    
+                    <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+                        <div class="flex items-center justify-between">
+                            <p class="text-sm font-medium text-gray-400">Total Clicks</p>
+                            <i data-lucide="mouse-pointer" class="w-6 h-6 text-indigo-500"></i>
+                        </div>
+                        <p class="text-4xl font-extrabold mt-2 text-emerald-400">1250</p>
+                        <a href="earn.html" class="mt-4 block text-emerald-500 font-medium">
+                            Quick Link: Earn More &rarr;
+                        </a>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+                        <div class="flex items-center justify-between">
+                            <p class="text-sm font-medium text-gray-400">Active Referrals</p>
+                            <i data-lucide="users" class="w-6 h-6 text-pink-500"></i>
+                        </div>
+                        <p class="text-4xl font-extrabold mt-2 text-emerald-400">8</p>
+                        <a href="referrals.html" class="mt-4 block text-pink-500 font-medium">
+                            Invite Friends &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- How to Earn Section -->
+                <div class="p-8 rounded-xl bg-white/5 border border-white/10 border-l-4 border-emerald-500">
+                    <h3 class="text-2xl font-bold mb-4 text-emerald-300">How to Earn with ZimFaucet</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i data-lucide="trending-up" class="w-6 h-6 text-emerald-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold text-emerald-300">1. Click & View</h4>
+                                <p class="text-gray-300">Visit the "Earn Clicks" page, click on available advertiser links, and stay on the page for the required duration to earn credits.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-lucide="target" class="w-6 h-6 text-emerald-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold text-emerald-300">2. Complete Tasks</h4>
+                                <p class="text-gray-300">Head over to the "Tasks & Offers" page for surveys, sign-ups, and short challenges with higher payout rates.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-lucide="hand-coins" class="w-6 h-6 text-emerald-500 mr-3 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-semibold text-emerald-300">3. Cash Out</h4>
+                                <p class="text-gray-300">Once you reach the minimum of $0.50, submit a withdrawal request through your preferred payment gateway.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[rgba(0,0,0,0.3)] py-12 border-t border-white/10 mt-12">
+        <div class="container mx-auto px-5">
+            <div class="text-center text-gray-500">&copy; <span id="current-year"></span> ZimFaucet. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

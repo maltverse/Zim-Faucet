@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertiser Portal - ZimFaucet</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-[#1a1a2e] to-[#16213e] text-gray-100">
+    <header class="backdrop-blur-sm bg-[rgba(26,26,46,0.95)] border-b border-white/10 sticky top-0 z-50">
+        <div class="container mx-auto px-5 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="text-2xl text-emerald-400">💰</span>
+                <h1 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-amber-400">ZimFaucet</h1>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="px-4 py-2 rounded-full border border-emerald-500 text-sm">Home</a>
+                <button class="px-4 py-2 rounded-full bg-emerald-500 text-white text-sm font-semibold" id="logout-btn">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-5 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar Navigation -->
+            <aside class="lg:w-1/4 bg-white/5 rounded-xl p-6 border border-white/10 h-fit">
+                <nav class="space-y-2">
+                    <a href="dashboard.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="layout-dashboard" class="w-5 h-5 mr-3"></i> Dashboard
+                    </a>
+                    <a href="earn.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="dollar-sign" class="w-5 h-5 mr-3"></i> Earn Clicks
+                    </a>
+                    <a href="tasks.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="list-checks" class="w-5 h-5 mr-3"></i> Tasks & Offers
+                    </a>
+                    <a href="withdraw.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="wallet" class="w-5 h-5 mr-3"></i> Withdrawal
+                    </a>
+                    <div class="h-px bg-white/10 my-2"></div>
+                    <a href="referrals.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="users" class="w-5 h-5 mr-3"></i> Referrals
+                    </a>
+                    <div class="h-px bg-white/10 my-2"></div>
+                    <a href="advertiser.html" class="flex items-center p-3 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                        <i data-lucide="megaphone" class="w-5 h-5 mr-3"></i> Advertiser Portal
+                    </a>
+                    <a href="about.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="info" class="w-5 h-5 mr-3"></i> About Us
+                    </a>
+                    <a href="contact.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="mail" class="w-5 h-5 mr-3"></i> Contact
+                    </a>
+                    <a href="faq.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="help-circle" class="w-5 h-5 mr-3"></i> FAQ
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lg:w-3/4">
+                <h2 class="text-3xl font-bold text-emerald-300 mb-8">Advertiser Portal</h2>
+
+                <div class="p-8 bg-white/5 rounded-xl border border-white/10 space-y-6 mb-8">
+                    <h3 class="text-3xl font-bold text-indigo-400">Boost Your Brand with ZimFaucet</h3>
+                    <p class="text-gray-300">Reach thousands of engaged users actively looking to earn. Our platform provides high visibility and quality traffic for your links, products, or services in the Zimbabwean market.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                        <div class="text-center p-5 border rounded-xl border-indigo-500/30 bg-indigo-500/10">
+                            <i data-lucide="gem" class="w-8 h-8 text-indigo-400 mx-auto mb-3"></i>
+                            <h4 class="font-bold text-xl mb-1 text-indigo-300">Standard Click Ad</h4>
+                            <p class="text-3xl font-extrabold text-white">$1.00 <span class="text-base font-normal text-gray-400">/ 100 views</span></p>
+                            <p class="text-sm text-gray-400 mt-2">Minimum 10-second view time.</p>
+                        </div>
+                        <div class="text-center p-5 border rounded-xl border-indigo-500/30 bg-indigo-500/10">
+                            <i data-lucide="zap" class="w-8 h-8 text-indigo-400 mx-auto mb-3"></i>
+                            <h4 class="font-bold text-xl mb-1 text-indigo-300">Premium Task Offer</h4>
+                            <p class="text-3xl font-extrabold text-white">$50.00 <span class="text-base font-normal text-gray-400">/ 100 signups</span></p>
+                            <p class="text-sm text-gray-400 mt-2">Higher engagement guaranteed.</p>
+                        </div>
+                        <div class="text-center p-5 border rounded-xl border-indigo-500/30 bg-indigo-500/10">
+                            <i data-lucide="link" class="w-8 h-8 text-indigo-400 mx-auto mb-3"></i>
+                            <h4 class="font-bold text-xl mb-1 text-indigo-300">Featured Link</h4>
+                            <p class="text-3xl font-extrabold text-white">$0.05 <span class="text-base font-normal text-gray-400">/ click</span></p>
+                            <p class="text-sm text-gray-400 mt-2">Top placement on the Earn page.</p>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="mt-6 w-full block text-center py-3 bg-indigo-500 text-white font-bold rounded-lg shadow-md hover:bg-indigo-600 transition-colors">
+                        Get Started - Contact Sales
+                    </a>
+                </div>
+
+                <!-- Advertising Benefits -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="p-6 bg-white/5 rounded-xl border border-white/10">
+                        <h3 class="text-xl font-bold text-emerald-300 mb-4">Why Advertise With Us?</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>Targeted Zimbabwean audience actively engaged with content</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>High conversion rates with users motivated to complete actions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>Real-time analytics and performance tracking</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>Flexible budget options starting from as low as $10</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 bg-white/5 rounded-xl border border-white/10">
+                        <h3 class="text-xl font-bold text-emerald-300 mb-4">Our Audience</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-300">Active Users</span>
+                                    <span class="text-emerald-400 font-bold">42,816</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="bg-emerald-500 h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-300">Daily Clicks</span>
+                                    <span class="text-emerald-400 font-bold">125,000+</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="bg-emerald-500 h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-300">Completion Rate</span>
+                                    <span class="text-emerald-400 font-bold">92%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="bg-emerald-500 h-2 rounded-full" style="width: 92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success Stories -->
+                <div class="p-6 bg-white/5 rounded-xl border border-white/10">
+                    <h3 class="text-2xl font-bold text-emerald-300 mb-6">Success Stories</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-4 bg-indigo-500/10 rounded-lg border border-indigo-500/20">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold">TC</div>
+                                <div class="ml-3">
+                                    <div class="font-semibold text-indigo-300">TechCorp ZW</div>
+                                    <div class="text-xs text-gray-400">E-commerce</div>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 text-sm">"Our conversion rate increased by 45% after running a 2-week campaign with ZimFaucet. The targeted Zimbabwean audience was exactly what we needed."</p>
+                        </div>
+                        <div class="p-4 bg-emerald-500/10 rounded-lg border border-emerald-500/20">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold">FM</div>
+                                <div class="ml-3">
+                                    <div class="font-semibold text-emerald-300">FinanceMobile</div>
+                                    <div class="text-xs text-gray-400">Fintech</div>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 text-sm">"We acquired over 2,000 qualified leads for our mobile banking app in just one month. The ROI exceeded our expectations significantly."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[rgba(0,0,0,0.3)] py-12 border-t border-white/10 mt-12">
+        <div class="container mx-auto px-5">
+            <div class="text-center text-gray-500">&copy; <span id="current-year"></span> ZimFaucet. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

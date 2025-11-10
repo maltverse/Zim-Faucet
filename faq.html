@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - ZimFaucet</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-[#1a1a2e] to-[#16213e] text-gray-100">
+    <header class="backdrop-blur-sm bg-[rgba(26,26,46,0.95)] border-b border-white/10 sticky top-0 z-50">
+        <div class="container mx-auto px-5 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="text-2xl text-emerald-400">💰</span>
+                <h1 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-amber-400">ZimFaucet</h1>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="px-4 py-2 rounded-full border border-emerald-500 text-sm">Home</a>
+                <button class="px-4 py-2 rounded-full bg-emerald-500 text-white text-sm font-semibold" id="logout-btn">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-5 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar Navigation -->
+            <aside class="lg:w-1/4 bg-white/5 rounded-xl p-6 border border-white/10 h-fit">
+                <nav class="space-y-2">
+                    <a href="dashboard.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="layout-dashboard" class="w-5 h-5 mr-3"></i> Dashboard
+                    </a>
+                    <a href="earn.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="dollar-sign" class="w-5 h-5 mr-3"></i> Earn Clicks
+                    </a>
+                    <a href="tasks.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="list-checks" class="w-5 h-5 mr-3"></i> Tasks & Offers
+                    </a>
+                    <a href="withdraw.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="wallet" class="w-5 h-5 mr-3"></i> Withdrawal
+                    </a>
+                    <div class="h-px bg-white/10 my-2"></div>
+                    <a href="referrals.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="users" class="w-5 h-5 mr-3"></i> Referrals
+                    </a>
+                    <div class="h-px bg-white/10 my-2"></div>
+                    <a href="advertiser.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="megaphone" class="w-5 h-5 mr-3"></i> Advertiser Portal
+                    </a>
+                    <a href="about.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="info" class="w-5 h-5 mr-3"></i> About Us
+                    </a>
+                    <a href="contact.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="mail" class="w-5 h-5 mr-3"></i> Contact
+                    </a>
+                    <a href="faq.html" class="flex items-center p-3 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                        <i data-lucide="help-circle" class="w-5 h-5 mr-3"></i> FAQ
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lg:w-3/4">
+                <h2 class="text-3xl font-bold text-emerald-300 mb-8">Frequently Asked Questions</h2>
+
+                <div class="p-8 bg-white/5 rounded-xl border border-white/10">
+                    <p class="mb-6 text-gray-300">Find quick answers to the most common questions about earning, tasks, and payouts on <span class="text-emerald-400 font-bold">ZimFaucet</span>.</p>
+                    
+                    <div class="space-y-4">
+                        <details class="group border-b border-white/10 py-4 transition-all duration-300">
+                            <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg text-emerald-300 hover:text-emerald-400">
+                                What is the minimum withdrawal amount?
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+                            </summary>
+                            <div class="mt-2 text-gray-300 pl-4 pr-10">
+                                <p>The minimum amount for withdrawal is <span class="text-emerald-400 font-bold">$0.50 USD</span>.</p>
+                            </div>
+                        </details>
+
+                        <details class="group border-b border-white/10 py-4 transition-all duration-300">
+                            <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg text-emerald-300 hover:text-emerald-400">
+                                What is the withdrawal fee?
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+                            </summary>
+                            <div class="mt-2 text-gray-300 pl-4 pr-10">
+                                <p>We charge a <span class="text-emerald-400 font-bold">5% fee</span> on all withdrawal amounts to cover processing costs and currency conversion.</p>
+                            </div>
+                        </details>
+
+                        <details class="group border-b border-white/10 py-4 transition-all duration-300">
+                            <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg text-emerald-300 hover:text-emerald-400">
+                                How long does a withdrawal take?
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+                            </summary>
+                            <div class="mt-2 text-gray-300 pl-4 pr-10">
+                                <p>Withdrawals are typically processed within <span class="text-emerald-400 font-bold">24-48 hours</span>, depending on the chosen payment gateway.</p>
+                            </div>
+                        </details>
+
+                        <details class="group border-b border-white/10 py-4 transition-all duration-300">
+                            <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg text-emerald-300 hover:text-emerald-400">
+                                Which payment gateways are supported?
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+                            </summary>
+                            <div class="mt-2 text-gray-300 pl-4 pr-10">
+                                <p>We currently support <span class="text-emerald-400 font-bold">Ecocash, OneMoney, and Inbux/InBucks</span> for local transfers.</p>
+                            </div>
+                        </details>
+
+                        <details class="group border-b border-white/10 py-4 transition-all duration-300">
+                            <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg text-emerald-300 hover:text-emerald-400">
+                                How does the referral program work?
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+                            </summary>
+                            <div class="mt-2 text-gray-300 pl-4 pr-10">
+                                <p>You earn a <span class="text-emerald-400 font-bold">10% commission</span> on all earnings generated by users who signed up using your unique referral link.</p>
+                            </div>
+                        </details>
+
+                        <details class="group border-b border-white/10 py-4 transition-all duration-300">
+                            <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg text-emerald-300 hover:text-emerald-400">
+                                Is there a limit to how much I can earn per day?
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+                            </summary>
+                            <div class="mt-2 text-gray-300 pl-4 pr-10">
+                                <p>There's no hard limit on daily earnings. Your potential earnings depend on the number of available ads and tasks, and how actively you participate.</p>
+                            </div>
+                        </details>
+
+                        <details class="group border-b border-white/10 py-4 transition-all duration-300">
+                            <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg text-emerald-300 hover:text-emerald-400">
+                                Do I need a cryptocurrency wallet?
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+                            </summary>
+                            <div class="mt-2 text-gray-300 pl-4 pr-10">
+                                <p>No! We handle all cryptocurrency aspects automatically. You earn in USD and receive payments in local currency through supported gateways.</p>
+                            </div>
+                        </details>
+
+                        <details class="group border-b border-white/10 py-4 transition-all duration-300">
+                            <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg text-emerald-300 hover:text-emerald-400">
+                                What happens if an ad doesn't credit my account?
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+                            </summary>
+                            <div class="mt-2 text-gray-300 pl-4 pr-10">
+                                <p>If you encounter issues with ad credits, please contact our support team with details of the ad and time viewed. We'll investigate and credit your account if verified.</p>
+                            </div>
+                        </details>
+
+                        <details class="group border-b border-white/10 py-4 transition-all duration-300">
+                            <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg text-emerald-300 hover:text-emerald-400">
+                                Can I use multiple accounts?
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+                            </summary>
+                            <div class="mt-2 text-gray-300 pl-4 pr-10">
+                                <p>No, multiple accounts are strictly prohibited. Each user is allowed only one account. Violation may result in permanent suspension of all accounts.</p>
+                            </div>
+                        </details>
+
+                        <details class="group py-4 transition-all duration-300">
+                            <summary class="flex justify-between items-center cursor-pointer font-semibold text-lg text-emerald-300 hover:text-emerald-400">
+                                Is my personal information secure?
+                                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+                            </summary>
+                            <div class="mt-2 text-gray-300 pl-4 pr-10">
+                                <p>Yes, we take data security seriously. Your personal information is encrypted and never shared with third parties without your consent. We comply with all applicable data protection regulations.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Still Have Questions -->
+                <div class="mt-8 p-6 bg-emerald-500/10 rounded-xl border border-emerald-500/20">
+                    <div class="text-center">
+                        <i data-lucide="help-circle" class="w-12 h-12 text-emerald-400 mx-auto mb-4"></i>
+                        <h3 class="text-xl font-bold text-emerald-300 mb-2">Still Have Questions?</h3>
+                        <p class="text-gray-300 mb-4">Can't find the answer you're looking for? Please reach out to our friendly support team.</p>
+                        <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-emerald-500 text-white font-bold rounded-lg hover:bg-emerald-600 transition-colors">
+                            <i data-lucide="mail" class="w-4 h-4 mr-2"></i>
+                            Contact Support
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[rgba(0,0,0,0.3)] py-12 border-t border-white/10 mt-12">
+        <div class="container mx-auto px-5">
+            <div class="text-center text-gray-500">&copy; <span id="current-year"></span> ZimFaucet. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ZimFaucet</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-[#1a1a2e] to-[#16213e] text-gray-100">
+    <header class="backdrop-blur-sm bg-[rgba(26,26,46,0.95)] border-b border-white/10 sticky top-0 z-50">
+        <div class="container mx-auto px-5 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="text-2xl text-emerald-400">💰</span>
+                <h1 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-amber-400">ZimFaucet</h1>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="px-4 py-2 rounded-full border border-emerald-500 text-sm">Home</a>
+                <button class="px-4 py-2 rounded-full bg-emerald-500 text-white text-sm font-semibold" id="logout-btn">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-5 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar Navigation -->
+            <aside class="lg:w-1/4 bg-white/5 rounded-xl p-6 border border-white/10 h-fit">
+                <nav class="space-y-2">
+                    <a href="dashboard.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="layout-dashboard" class="w-5 h-5 mr-3"></i> Dashboard
+                    </a>
+                    <a href="earn.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="dollar-sign" class="w-5 h-5 mr-3"></i> Earn Clicks
+                    </a>
+                    <a href="tasks.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="list-checks" class="w-5 h-5 mr-3"></i> Tasks & Offers
+                    </a>
+                    <a href="withdraw.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="wallet" class="w-5 h-5 mr-3"></i> Withdrawal
+                    </a>
+                    <div class="h-px bg-white/10 my-2"></div>
+                    <a href="referrals.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="users" class="w-5 h-5 mr-3"></i> Referrals
+                    </a>
+                    <div class="h-px bg-white/10 my-2"></div>
+                    <a href="advertiser.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="megaphone" class="w-5 h-5 mr-3"></i> Advertiser Portal
+                    </a>
+                    <a href="about.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="info" class="w-5 h-5 mr-3"></i> About Us
+                    </a>
+                    <a href="contact.html" class="flex items-center p-3 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                        <i data-lucide="mail" class="w-5 h-5 mr-3"></i> Contact
+                    </a>
+                    <a href="faq.html" class="flex items-center p-3 rounded-lg text-gray-300 hover:bg-white/5 hover:text-emerald-300 transition">
+                        <i data-lucide="help-circle" class="w-5 h-5 mr-3"></i> FAQ
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lg:w-3/4">
+                <h2 class="text-3xl font-bold text-emerald-300 mb-8">Contact Us</h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Contact Form -->
+                    <div class="p-8 bg-white/5 rounded-xl border border-white/10">
+                        <h3 class="text-2xl font-bold text-emerald-300 mb-6">Send Us a Message</h3>
+                        <p class="mb-6 text-gray-300">We're here to help! Please use the form below for support, business inquiries, or general questions.</p>
+                        <form onsubmit="handleContactForm(event)" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-1 text-gray-300">Your Name</label>
+                                <input type="text" id="name" class="w-full p-3 border border-white/10 bg-white/5 rounded-lg focus:ring-emerald-500 focus:border-emerald-500 text-white" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-1 text-gray-300">Your Email</label>
+                                <input type="email" id="email" class="w-full p-3 border border-white/10 bg-white/5 rounded-lg focus:ring-emerald-500 focus:border-emerald-500 text-white" required>
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-sm font-medium mb-1 text-gray-300">Subject</label>
+                                <select id="subject" class="w-full p-3 border border-white/10 bg-white/5 rounded-lg focus:ring-emerald-500 focus:border-emerald-500 text-white" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="withdrawal">Withdrawal Issue</option>
+                                    <option value="account">Account Problem</option>
+                                    <option value="advertising">Advertising Inquiry</option>
+                                    <option value="partnership">Partnership Opportunity</option>
+                                    <option value="general">General Question</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium mb-1 text-gray-300">Message</label>
+                                <textarea id="message" rows="4" class="w-full p-3 border border-white/10 bg-white/5 rounded-lg focus:ring-emerald-500 focus:border-emerald-500 text-white" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-3 bg-emerald-500 text-white font-bold rounded-lg hover:bg-emerald-600 transition-colors">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="p-8 bg-white/5 rounded-xl border border-white/10 h-fit">
+                        <h3 class="text-2xl font-bold text-emerald-300 mb-6">Get In Touch</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i data-lucide="mail" class="w-6 h-6 text-emerald-400 mr-3 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-emerald-300">Email Us</h4>
+                                    <p class="text-gray-300">support@zimfaucet.com</p>
+                                    <p class="text-sm text-gray-400">We typically respond within 24 hours</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <i data-lucide="message-circle" class="w-6 h-6 text-emerald-400 mr-3 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-emerald-300">WhatsApp</h4>
+                                    <p class="text-gray-300">+263 77 123 4567</p>
+                                    <p class="text-sm text-gray-400">Available 9AM - 5PM (CAT)</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <i data-lucide="clock" class="w-6 h-6 text-emerald-400 mr-3 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-emerald-300">Business Hours</h4>
+                                    <p class="text-gray-300">Monday - Friday: 9AM - 5PM</p>
+                                    <p class="text-gray-300">Saturday: 9AM - 1PM</p>
+                                    <p class="text-sm text-gray-400">CAT (Central Africa Time)</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-emerald-400 mr-3 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-emerald-300">Location</h4>
+                                    <p class="text-gray-300">Harare, Zimbabwe</p>
+                                    <p class="text-sm text-gray-400">Serving users across Zimbabwe</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div class="mt-8 pt-6 border-t border-white/10">
+                            <h4 class="font-semibold text-emerald-300 mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="p-2 bg-blue-500/10 rounded-lg hover:bg-blue-500/20 transition">
+                                    <i data-lucide="facebook" class="w-5 h-5 text-blue-400"></i>
+                                </a>
+                                <a href="#" class="p-2 bg-blue-400/10 rounded-lg hover:bg-blue-400/20 transition">
+                                    <i data-lucide="twitter" class="w-5 h-5 text-blue-300"></i>
+                                </a>
+                                <a href="#" class="p-2 bg-purple-500/10 rounded-lg hover:bg-purple-500/20 transition">
+                                    <i data-lucide="instagram" class="w-5 h-5 text-purple-400"></i>
+                                </a>
+                                <a href="#" class="p-2 bg-green-500/10 rounded-lg hover:bg-green-500/20 transition">
+                                    <i data-lucide="message-circle" class="w-5 h-5 text-green-400"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Preview -->
+                <div class="mt-12 p-6 bg-white/5 rounded-xl border border-white/10">
+                    <h3 class="text-2xl font-bold text-emerald-300 mb-4">Frequently Asked Questions</h3>
+                    <p class="text-gray-300 mb-4">Check our FAQ page for quick answers to common questions about earning, tasks, and payouts.</p>
+                    <a href="faq.html" class="inline-flex items-center px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors">
+                        <i data-lucide="help-circle" class="w-4 h-4 mr-2"></i>
+                        Visit FAQ Page
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[rgba(0,0,0,0.3)] py-12 border-t border-white/10 mt-12">
+        <div class="container mx-auto px-5">
+            <div class="text-center text-gray-500">&copy; <span id="current-year"></span> ZimFaucet. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        function handleContactForm(event) {
+            event.preventDefault();
+            alert('Message Sent! We will get back to you shortly.');
+            // In a real application, you would submit the form data to a server
+            event.target.reset();
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
